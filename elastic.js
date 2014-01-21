@@ -185,6 +185,10 @@ angular.module('monospaced.elastic', [])
         }, function(newValue){
           forceAdjust();
         });
+        
+        scope.$watch(function(){ 
+            return element.is(':visible');
+        }, forceAdjust);
 
         /*
          * destroy
